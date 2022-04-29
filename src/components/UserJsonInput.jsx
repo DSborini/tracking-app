@@ -1,14 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export class UserJsonInput extends Component {
+class UserJsonInput extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      json: '',
+      error: false,
+    };
+  }
+
   render() {
     return (
       <div>
-          <h3>Enter the process JSON:</h3>
-          <textarea></textarea>
-          <button type='button'>Validate</button>
+        <h3>Enter the process JSON:</h3>
+        <textarea />
+        <button type="button">Validate</button>
       </div>
-    )
+    );
   }
 }
 
