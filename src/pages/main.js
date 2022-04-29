@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import UserJsonInput from '../components/UserJsonInput';
 
-export class main extends Component {
+class Main extends Component {
   render() {
     return (
       <UserJsonInput />
@@ -9,4 +9,4 @@ export class main extends Component {
   }
 }
 
-export default main;
+export default Main;
