@@ -13,7 +13,7 @@
   max-height: 40px;
   align-self: center;
   cursor: pointer;
-  margin-right: 60px;
+  margin-right: 8vh;
 }
 
 .textarea__primary {
@@ -26,20 +26,28 @@
   max-width: 90%;
   height: 800px;
   margin-left: 20px;
+  background-color: #e7edf4fe;
 }
 
 .title__primary {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 20px;
   font-weight: bold;
-  color: rgb(63, 125, 232);
-  margin-left: 20px;
+  color: rgb(256, 256, 256);
+  margin-left: 2vh;
+}
+
+.main__div {
+  display: flex;
+  flex-direction: row;
 }
 
 .first__div {
   display: flex;
   flex-direction: column;
   width: 50%;
+  background-color: #1a2437fe;
+  /* height: 100vh; */
 }
 
 .second__div {
