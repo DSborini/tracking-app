@@ -11,7 +11,7 @@ class UserJsonInput extends Component {
 
     this.state = {
       render: false,
-      // json: '',
+      json: '',
       // error: false,
     };
   }
@@ -31,8 +31,24 @@ class UserJsonInput extends Component {
     });
   }
 
+  validateIsJson(json) {
+    try {
+      JSON.parse(json);
+      return JSON.parse(json);
+    } catch (e) {
+      return false;
+    }
+  }
+
   filterTrackEvent(json) {
-    const data = json.states;
+    const errorTxt = 'Invalid JSON';
+    const jsonObj = this.validateIsJson(json);
+
+    if (json === '' && json === undefined) return errorTxt;
+    if (jsonObj === false) return errorTxt;
+    if (jsonObj.states === undefined) return errorTxt;
+
+    const data = jsonObj.states;
 
     const onlyActions = data.map((statesArray) => {
       const { inputActions } = statesArray;
@@ -52,12 +68,12 @@ class UserJsonInput extends Component {
   renderTrackings() {
     const { json } = this.state;
     const { render } = this.state;
-    // const data = this.filterTrackEvent(json);
 
-    console.log('executei');
+    const data = this.filterTrackEvent(json);
+    console.log(data);
 
     if (render) {
-      return <Tracking jsonData={ json } />;
+      return <Tracking jsonData={ data } />;
     }
   }
 
