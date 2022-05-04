@@ -15,14 +15,18 @@ class Tracking extends Component {
   renderTracking() {
     const { jsonData } = this.props;
 
-    if (jsonData === 'Invalid JSON') return <p>Invalid JSON</p>;
+    if (jsonData === 'Invalid JSON') {
+      return (
+        <p className="tc__error">JSON entered is invalid</p>
+      );
+    }
 
     return jsonData.map((tracking, i) => {
       const { category, action } = tracking.parsedSettings;
       return (
-        <div key={ i }>
-          <p>{ category }</p>
-          <p>{ action }</p>
+        <div key={ i } className="tc__div">
+          <p className="tc__title">{ category }</p>
+          <p className="tc__subtitle">{ action }</p>
         </div>
       );
     });

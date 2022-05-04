@@ -47,7 +47,7 @@
   flex-direction: column;
   width: 50%;
   background-color: #1a2437fe;
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 .second__div {
@@ -55,3 +55,40 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.third__div {
+  display: flex;
+  flex-direction: column;
+}
+
+.tc__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tc__title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: -2vh;
+  margin-left: 5vh;
+}
+
+.tc__subtitle {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #93a6b5;
+  margin-left: 5vh;
+}
+
+.tc__error {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff0000;
+  margin-left: 5vh;
+}
+
