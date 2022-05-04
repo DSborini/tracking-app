@@ -1,6 +1,6 @@
 {
   "name": "tracking-app",
-  "homepage": "https://dsborini.github.io/tracking-app",
+  "homepage": "tracking-app/",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
