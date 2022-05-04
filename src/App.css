@@ -13,20 +13,21 @@
   max-height: 40px;
   align-self: center;
   cursor: pointer;
-  margin-right: 8vh;
+  margin-right: 5vh;
 }
 
 .textarea__primary {
   resize: none;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 13px;
-  border: 1px solid rgb(210, 223, 230);
+  color: black;
+  border: 1px solid #93a6b5;
   box-sizing: border-box;
   border-radius: 8px;
   max-width: 90%;
-  height: 800px;
-  margin-left: 20px;
-  background-color: #e7edf4fe;
+  height: 90vh;
+  margin-left: 5vh;
+  background-color: #93a6b5;
 }
 
 .title__primary {
@@ -34,7 +35,7 @@
   font-size: 20px;
   font-weight: bold;
   color: rgb(256, 256, 256);
-  margin-left: 2vh;
+  margin-left: 5vh;
 }
 
 .main__div {
@@ -59,6 +60,8 @@
 .third__div {
   display: flex;
   flex-direction: column;
+  background-color: #1b2538;
+  width: 100vh;
 }
 
 .tc__div {
@@ -71,9 +74,14 @@
   font-family: 'Nunito Sans', sans-serif;
   font-size: 20px;
   font-weight: bold;
-  color: black;
+  color: rgb(256, 256, 256);
   margin-bottom: -2vh;
   margin-left: 5vh;
+}
+
+.tc__first__title {
+  margin-top: 1vh;
+  color: #1a2437;
 }
 
 .tc__subtitle {
@@ -90,5 +98,22 @@
   font-weight: bold;
   color: #ff0000;
   margin-left: 5vh;
+}
+
+.not__found__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a2437;
+  height: 100vh;
+}
+
+.not__found {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #93a6b5;
+  margin-left: 5vh;
+  margin-top: 20vh;
 }
 

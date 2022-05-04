@@ -17,7 +17,7 @@ class Tracking extends Component {
 
     if (jsonData === 'Invalid JSON') {
       return (
-        <p className="tc__error">JSON entered is invalid</p>
+        <p className="tc__error">JSON entered is invalid 🙁</p>
       );
     }
 
@@ -35,6 +35,7 @@ class Tracking extends Component {
   render() {
     return (
       <>
+        <p className="tc__first__title">.</p>
         { this.renderTracking() }
       </>
     );
