@@ -79,10 +79,23 @@ class UserJsonInput extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Enter the process JSON:</h3>
-        <textarea name="json" onChange={ this.handleChange } />
-        <button type="button" onClick={ () => this.updateRender(true) }>Validate</button>
+      <div className="first__div">
+        <div className="second__div">
+          <p className="title__primary">Enter the process JSON:</p>
+          <button
+            className="button__primary"
+            type="button"
+            onClick={ () => this.updateRender(true) }
+          >
+            Validate
+
+          </button>
+        </div>
+        <textarea
+          className="textarea__primary"
+          name="json"
+          onChange={ this.handleChange }
+        />
         { this.renderTrackings() }
       </div>
     );
