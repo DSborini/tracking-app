@@ -103,6 +103,15 @@
   margin-left: 5vh;
 }
 
+.tc__extras {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFB186;
+  margin-left: 5vh;
+  margin-top: -0.5vh;
+}
+
 .tc__error {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 30px;
