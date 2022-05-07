@@ -8,6 +8,7 @@ class UserJsonInput extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.renderTrackings = this.renderTrackings.bind(this);
     this.updateRender = this.updateRender.bind(this);
+    this.clearJson = this.clearJson.bind(this);
 
     this.state = {
       render: false,
@@ -22,6 +23,12 @@ class UserJsonInput extends Component {
 
     this.setState({
       [name]: value,
+    });
+  }
+
+  clearJson() {
+    this.setState({
+      json: '',
     });
   }
 
@@ -78,24 +85,36 @@ class UserJsonInput extends Component {
   }
 
   render() {
+    const { json } = this.state;
     return (
       <div className="main__div">
         <div className="first__div">
           <div className="second__div">
             <p className="title__primary">Enter the process JSON:</p>
-            <button
-              className="button__primary"
-              type="button"
-              onClick={ () => this.updateRender(true) }
-            >
-              Validate
+            <div className="button__div">
+              <button
+                type="button"
+                className="button__primary button__primary_red"
+                onClick={ this.clearJson }
+              >
+                Clear
 
-            </button>
+              </button>
+              <button
+                className="button__primary"
+                type="button"
+                onClick={ () => this.updateRender(true) }
+              >
+                Validate
+
+              </button>
+            </div>
           </div>
           <textarea
             className="textarea__primary"
             name="json"
             onChange={ this.handleChange }
+            value={ json }
           />
         </div>
         <div className="third__div">

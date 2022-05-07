@@ -13,7 +13,11 @@
   max-height: 40px;
   align-self: center;
   cursor: pointer;
-  margin-right: 5vh;
+}
+
+.button__primary_red {
+  background: #ff4c4c;
+  margin-right: 10px;
 }
 
 .textarea__primary {
@@ -64,10 +68,17 @@
   min-width: 50%;
 }
 
+.button__div {
+  display: flex;
+  flex-direction: row;
+  margin-right: 5vh;
+  justify-content: flex-end;
+}
+
 .tc__div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .tc__title {
