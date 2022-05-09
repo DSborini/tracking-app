@@ -50,20 +50,28 @@ class UserJsonInput extends Component {
   filterTrackEvent(json) {
     const errorTxt = 'Invalid JSON';
     const jsonObj = this.validateIsJson(json);
+    let data = jsonObj.states;
 
     if (json === '' && json === undefined) return errorTxt;
     if (jsonObj === false) return errorTxt;
-    if (jsonObj.states === undefined) return errorTxt;
 
-    const data = jsonObj.states;
+    if (jsonObj.states === undefined) {
+      const array = [];
+      array.push(jsonObj);
+      data = array;
+    }
 
     const onlyActions = data.map((statesArray) => {
       const { inputActions } = statesArray;
       const { outputActions } = statesArray;
+
+      if (inputActions === undefined || outputActions === undefined) return false;
       const actions = [...inputActions, ...outputActions];
 
       return actions;
     });
+
+    if (onlyActions === false) return errorTxt;
 
     const flatActions = onlyActions.flat(Infinity);
 
@@ -73,9 +81,7 @@ class UserJsonInput extends Component {
   }
 
   renderTrackings() {
-    const { json } = this.state;
-    const { render } = this.state;
-
+    const { json, render } = this.state;
     const data = this.filterTrackEvent(json);
     console.log(data);
 

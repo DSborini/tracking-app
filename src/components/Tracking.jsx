@@ -13,6 +13,8 @@ class Tracking extends Component {
   }
 
   filterExtras(extras) {
+    if (extras === undefined) return {};
+
     const keys = Object.keys(extras);
     const filteredExtrasKeys = keys.filter((key) => !key.includes('#'));
     const filteredExtrasValues = filteredExtrasKeys.map((key) => extras[key]);
@@ -47,6 +49,9 @@ class Tracking extends Component {
 
     return jsonData.map((tracking, i) => {
       const { category, action, extras } = tracking.parsedSettings;
+      const isFlow = category === 'flow';
+
+      if (isFlow) return null;
 
       return (
         <div key={ i } className="tc__div">
